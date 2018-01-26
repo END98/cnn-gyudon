@@ -1,3 +1,4 @@
+# https://qiita.com/Hironsan/items/f4100e2884efd2ad215d#_reference-94b6d787ea68ee42e35c
 import os
 import tornado.ioloop
 import tornado.web
