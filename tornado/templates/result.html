@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}トップページ{% end %}
+{% block content %}
+    <h1>牛丼リスト</h1>
+    <!-- <h1>教師あり機械学習の教師データの作成</h1>
+    <p>このサイトでは牛丼の種類に応じて手作業で写真を振り分けます。</p>
+    <p>現在はフォルダでデータ管理をしていますが、のちにデータベースに変更します</p>
+    -->
+
+    <p class='resize'><img src='{{ image_path }}'></p>
+ 
+    <form method='post' action='/'>
+        <p><input type='submit' value='普通の牛丼' name='variety'></p>
+    </form>
+
+    <form method='post' action='/'>
+        <p><input type='submit' value='紅生姜牛丼' name='variety'></p>
+    </form>
+
+    <form method='post' action='/'>
+        <p><input type='submit' value='ねぎ玉牛丼' name='variety'></p>
+    </form>
+
+    <form method='post' action='/'>
+        <p><input type='submit' value='チーズ牛丼' name='variety'></p>
+    </form>
+
+    <form method='post' action='/'>
+        <p><input type='submit' value='キムチ牛丼' name='variety'></p>
+    </form>
+
+    <form method='post' action='/'>
+        <p><input type='submit' value='その他' name='variety'></p>
+    </form>
+    
+{% end %}
