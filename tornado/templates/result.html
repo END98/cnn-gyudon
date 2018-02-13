@@ -1,36 +1,24 @@
 {% extends "base.html" %}
 {% block title %}トップページ{% end %}
 {% block content %}
-    <h1>牛丼リスト</h1>
-    <!-- <h1>教師あり機械学習の教師データの作成</h1>
-    <p>このサイトでは牛丼の種類に応じて手作業で写真を振り分けます。</p>
-    <p>現在はフォルダでデータ管理をしていますが、のちにデータベースに変更します</p>
-    -->
+    <h1>教師あり機械学習の結果</h1><br>
+    <p>このサイトでは牛丼の写真をアップすると、自動的にそれがなんの牛丼なのかを判別します。</p>
+    <p>紅生姜牛丼、チーズ牛丼、普通の牛丼、ネギ玉牛丼の四種類を分類します。</p>
+    <p>使用しているのは深層学習です</p>
 
-    <p class='resize'><img src='{{ image_path }}'></p>
- 
+    <!--
     <form method='post' action='/'>
         <p><input type='submit' value='普通の牛丼' name='variety'></p>
     </form>
+    <accept='image/*'/>
+    -->
 
-    <form method='post' action='/'>
-        <p><input type='submit' value='紅生姜牛丼' name='variety'></p>
+    <form method='post' enctype='multipart/form-data'>
+        <p>
+            ファイル：<input type='file' name='picture' ><br>
+            <input type='submit' name='image' value='send'><br>
+        </p>
     </form>
 
-    <form method='post' action='/'>
-        <p><input type='submit' value='ねぎ玉牛丼' name='variety'></p>
-    </form>
-
-    <form method='post' action='/'>
-        <p><input type='submit' value='チーズ牛丼' name='variety'></p>
-    </form>
-
-    <form method='post' action='/'>
-        <p><input type='submit' value='キムチ牛丼' name='variety'></p>
-    </form>
-
-    <form method='post' action='/'>
-        <p><input type='submit' value='その他' name='variety'></p>
-    </form>
     
 {% end %}
